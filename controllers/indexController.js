@@ -6,6 +6,9 @@ module.exports = {
         return res.render('index',{
             title : "Craftsy 2.0",
             productos,
+            nuevos : productos.filter(producto => producto.category === "nuevo"),
+            refact : productos.filter(producto => producto.category === "refaccionado"),
+            usados : productos.filter(producto => producto.category === "usado"),
             tutoriales
         })
     }
