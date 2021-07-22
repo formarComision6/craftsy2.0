@@ -15,5 +15,13 @@ module.exports = {
             producto,
             productos
         })
+    },
+    search : (req,res) => {
+        let result = productos.filter(producto => producto.category === req.query.search)
+        return res.render('resultSearch',{
+            result,
+            productos,
+            busqueda : req.query.search
+        })
     }
 }
