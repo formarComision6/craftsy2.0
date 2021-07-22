@@ -3,36 +3,48 @@
         "id" : 1,
         "title" : "Iphone SE",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-01.jpg"
+        "price" : 100,
+        "image" : "img-phone-01.jpg",
+        "category" : "nuevo"
     },
     {
         "id" : 2,
         "title" : "Samsung A02",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-02.jpg"
+        "price" : 100,
+        "image" : "img-phone-02.jpg",
+        "category" : "usado"
     },
     {
         "id" : 3,
         "title" : "Hyundai K4",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-03.png"
+        "price" : 100,
+        "image" : "img-phone-03.png",
+        "category" : "refaccionado"
     },
     {
         "id" : 4,
         "title" : "Motorola G9",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-04.png"
+        "price" : 100,
+        "image" : "img-phone-04.png",
+        "category" : "refaccionado"
     },
     {
         "id" : 5,
         "title" : "LG Luminus",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-05.jpg"
+        "price" : 100,
+        "image" : "img-phone-05.jpg",
+        "category" : "usado"
     },
     {
         "id" : 6,
         "title" : "Nokia 1100",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-06.png"
+        "price" : 100,
+        "image" : "img-phone-06.png",
+        "category" : "usado"
     }
 ]
