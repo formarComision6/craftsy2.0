@@ -3,16 +3,22 @@
     margin: 0 auto;
 }
 
-.home section.productos{
-    margin-top: 30px;
-    background-color: white;
-   
+.home section.productos article{
+    background-color: #ffff;
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 10px;
+    height: 425px;
+    position: relative;
 }
-
 
 .home section.productos article img{
     width: 100%;
 }
+
+.home section.productos article .contenedor{
+    background-color: blue;
+}
+
 
 .home section.productos article a{
     background-color: #F15C4F;
@@ -20,8 +26,10 @@
     text-transform: uppercase;
     padding: 10px;
     display: inline-block;
-    margin: 10px 0;
-
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 .home section.productos h4{
@@ -29,7 +37,7 @@
 }
 
 
-.home aside h3{
+.home aside h3, .home section.productos h3{
     background-color: white;
     padding: 10px;
     border: 1px solid #70a6bb;

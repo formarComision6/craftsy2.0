@@ -15,13 +15,13 @@
         "id" : 3,
         "title" : "Hyundai K4",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-03.jpg"
+        "image" : "img-phone-03.png"
     },
     {
         "id" : 4,
         "title" : "Motorola G9",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-04.jpg"
+        "image" : "img-phone-04.png"
     },
     {
         "id" : 5,
@@ -33,6 +33,6 @@
         "id" : 6,
         "title" : "Nokia 1100",
         "description" : "lorem ipsum dolor amet sit",
-        "image" : "img-phone-06.jpg"
+        "image" : "img-phone-06.png"
     }
 ]

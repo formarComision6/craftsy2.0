@@ -8,17 +8,23 @@
 
     <main class="container">
         <div class="row">
-            <section class="productos col-12 col-md-8 col-lg-9">
-                <div class="row py-4 px-2">
+            <section class="productos col-12 col-md-8 col-lg-9 ">
+                <h3>Celulares</h3>
+
+                <div class="celulares row py-4 gx-3">
                   <% productos.forEach(producto => { %>
-                    <article class="col-12 col-md-6 col-lg-4">
-                    <img src="/images/<%= producto.image %>"  class="img-fluid" alt="" />
-                    <h4><%= producto.title %> </h4>
-                    <p>
-                        <%= producto.description %> 
-                    </p>
-                    <a href="">ver más</a>
-                </article>
+                    <div class="col-12 col-md-6 col-lg-4 my-2">
+                        <article class="p-3">
+                            <img src="/images/<%= producto.image %>"  class="img-fluid" alt="" />
+                                <h4><%= producto.title %> </h4>
+                                <p>
+                                    <%= producto.description %> 
+                                </p>
+                                <a href="">ver más</a>
+                           
+                        </article>
+                    </div>
+                   
                   <% }) %>
             </div>
             </section>
