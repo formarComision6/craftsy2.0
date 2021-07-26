@@ -21,7 +21,11 @@
                                 <p>
                                     <%= producto.description %> 
                                 </p>
-                                <a href="/products/detail/<%= producto.id %>">ver más</a>
+                                <a class="btn btn-sm btn-success" href="/products/edit/<%= producto.id %>">editar</a>
+                                <a class="btn btn-sm btn-primary" href="/products/detail/<%= producto.id %>">ver más</a>
+                                <form action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                </form>
                            
                         </article>
                     </div>
@@ -35,6 +39,7 @@
                                 <p>
                                     <%= producto.description %> 
                                 </p>
+                                <a class="btn btn-success" href="/products/edit/<%= producto.id %>">editar</a>
                                 <a href="/products/detail/<%= producto.id %>">ver más</a>
                            
                         </article>
@@ -49,6 +54,7 @@
                                 <p>
                                     <%= producto.description %> 
                                 </p>
+                                <a class="btn btn-success" href="/products/edit/<%= producto.id %>">editar</a>
                                 <a href="/products/detail/<%= producto.id %>">ver más</a>
                            
                         </article>

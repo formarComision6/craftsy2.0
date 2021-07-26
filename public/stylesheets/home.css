@@ -21,15 +21,9 @@
 
 
 .home section.productos article a{
-    background-color: #F15C4F;
-    color: white;
+
     text-transform: uppercase;
-    padding: 10px;
-    display: inline-block;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+  
 }
 
 .home section.productos h4{
