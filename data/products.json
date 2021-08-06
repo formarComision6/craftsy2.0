@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Iphone SE",
-    "description": "lorem ipsum dolor amet sit",
+    "description": "lorem ipsum dolor amet sit            ",
     "price": 100,
     "image": "img-phone-01.jpg",
     "category": "nuevo"
@@ -34,8 +34,8 @@
   {
     "id": 5,
     "title": "LG Luminus",
-    "description": "lorem ipsum dolor amet sit",
-    "price": 100,
+    "description": "lorem ipsum dolor amet sit                             ",
+    "price": 300,
     "image": "img-phone-05.jpg",
     "category": "nuevo"
   },
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "title": "Iphone X",
-    "description": "carísimo pero copadoo",
+    "description": "carísimo pero copadoo  ",
     "price": 1000,
     "image": "default-image.png",
     "category": "nuevo"
@@ -110,5 +110,37 @@
     "price": 2000,
     "image": "default-image.png",
     "category": "nuevo"
+  },
+  {
+    "id": 15,
+    "title": "Product example",
+    "description": "Lorem ipsum dolor amet sit",
+    "price": 100,
+    "image": "default-image.png",
+    "category": "usado"
+  },
+  {
+    "id": 16,
+    "title": "LG Luminus",
+    "description": "Está bueno y barato",
+    "price": 123,
+    "image": "default-image.png",
+    "category": "refaccionado"
+  },
+  {
+    "id": 17,
+    "title": "Iphone X2",
+    "description": "Carísimooooo",
+    "price": 12645,
+    "image": "default-image.png",
+    "category": "nuevo"
+  },
+  {
+    "id": 18,
+    "title": "Motorola X-Play",
+    "description": "Esta está mejor que cualquiera!!",
+    "price": 123,
+    "image": "default-image.png",
+    "category": "usado"
   }
 ]

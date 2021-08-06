@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const categorias = require('../data/categories_db');
-const productos = require('../data/products_db');
+const {productos, guardar} = require('../data/products_db');
+const {validationResult} = require('express-validator');
 
 module.exports = {
     add : (req,res) => {
@@ -11,20 +12,31 @@ module.exports = {
         })
     },
     save : (req,res) => {
-        const {title, description,price,category} = req.body;
-
-        let producto = {
-            id : productos[productos.length - 1].id + 1,
-            title,
-            description,
-            price : +price,
-            image : 'default-image.png',
-            category
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const {title, description,price,category} = req.body;
+            let producto = {
+                id : productos[productos.length - 1].id + 1,
+                title,
+                description,
+                price : +price,
+                image : req.file ? req.files.filename : 'default-image.png',
+                category
+            }
+           productos.push(producto);
+    
+           guardar(productos)
+           return res.redirect('/')
+        }else{
+            return res.render('productAdd',{
+                categorias,
+                productos,
+                errores : errors.mapped(),
+                old : req.body
+            })
         }
-       productos.push(producto);
+       
 
-       fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productos,null,2),'utf-8')
-       return res.redirect('/')
     },
     detail : (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
@@ -35,7 +47,7 @@ module.exports = {
         })
     },
     search : (req,res) => {
-        let result = productos.filter(producto => producto.category === req.query.search)
+        let result = productos.filter(producto => producto.title.toLowerCase().includes(req.query.search.toLowerCase()));
         return res.render('resultSearch',{
             result,
             productos,
@@ -52,7 +64,23 @@ module.exports = {
         })
     },
     update : (req,res) => {
-        res.send(req.body)
+        const {title, description,price,category} = req.body;
+
+        let producto = productos.find(producto => producto.id === +req.params.id)
+        let productoEditado = {
+            id : +req.params.id,
+            title,
+            description,
+            price : +price,
+            image : req.file ? req.file.filename : producto.image,
+            category
+        }
+
+        let productosModificados = productos.map(producto => producto.id === +req.params.id ? productoEditado : producto)
+
+        guardar(productosModificados)
+        res.redirect('/')
+          
     },
     remove : (req,res) => {
         res.send(req.params.id)
