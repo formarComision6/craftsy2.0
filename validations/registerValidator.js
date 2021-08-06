@@ -18,6 +18,14 @@ module.exports = [
         max : 12
     }).withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
 
+    body('contrasenia2')
+    .custom((value,{req}) => {
+        if(value !== req.body.contrasenia){
+            return false
+        }
+        return true
+    }).withMessage('Las contraseñas no coinciden'),
+
     check('acepta')
     .isString('on').withMessage('Debes aceptar los términos y condiciones')
 ]
