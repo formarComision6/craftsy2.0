@@ -7,6 +7,9 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
+const cookieCheck = require('./middlewares/cookieCheck');
+const localsUserCheck = require('./middlewares/localsUserCheck');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
@@ -26,12 +29,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(methodOverride('_method'));
 app.use(session({
-  secret : "my secret"
+  secret : "my secret",
+  resave: false,
+  saveUninitialized: true
 }))
+
+app.use(cookieCheck);
+app.use(localsUserCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

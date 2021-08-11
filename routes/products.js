@@ -4,8 +4,14 @@ const {add,detail, search,save,edit,update,remove} = require('../controllers/pro
 const multer = require('multer');
 const path = require('path');
 
+/* validaciones */
 const addProductValidator = require('../validations/addProductValidator');
 
+
+/* middlewares */
+const adminUserCheck = require('../middlewares/adminUserCheck');
+
+/* subida de archivos */
 const storage = multer.diskStorage({
     destination : (req,file,callback) => {
         callback(null,'public/images')
@@ -20,11 +26,11 @@ const upload = multer({
 })
 
 /* /products */
-router.get('/add',add);
+router.get('/add',adminUserCheck, add);
 router.post('/add', upload.single('image'), addProductValidator,save);
 router.get('/detail/:id',detail);
 router.get('/search',search);
-router.get('/edit/:id',edit);
+router.get('/edit/:id',adminUserCheck, edit);
 router.put('/edit/:id',update);
 router.delete('/remove/:id',remove);
 

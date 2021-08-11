@@ -31,6 +31,12 @@ module.exports = {
             }
             usuarios.push(usuario);
             guardar(usuarios);
+
+            req.session.userLogin = {
+                id : usuario.id,
+                nombre : usuario.nombre,
+                rol : usuario.rol
+            }
             return res.redirect('/')
         }else{
             return res.render('register',{
@@ -48,14 +54,19 @@ module.exports = {
         })
     },
     processLogin : (req,res) => {
+
         let errors = validationResult(req);
-        const {email, contrasenia} = req.body;
+        const {email, recordar} = req.body;
         if(errors.isEmpty()){
             let usuario = usuarios.find(usuario => usuario.email === email)
             req.session.userLogin = {
                 id : usuario.id,
                 nombre : usuario.nombre,
                 rol : usuario.rol
+            }
+
+            if(recordar){
+                res.cookie('craftsyForEver',req.session.userLogin,{maxAge: 1000 * 60})
             }
             return res.redirect('/')
         }else{
@@ -64,5 +75,10 @@ module.exports = {
                 errores : errors.mapped()
             })
         }
+    },
+    logout : (req,res) => {
+        req.session.destroy();
+        res.cookie('craftsyForEver',null,{maxAge:-1})
+        return res.redirect('/')
     }
 }
