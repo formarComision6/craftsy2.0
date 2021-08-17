@@ -15,12 +15,15 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
             const {title, description,price,category} = req.body;
+            if(req.files){
+                var imagenes = req.files.map(imagen => imagen.filename)
+            }
             let producto = {
                 id : productos[productos.length - 1].id + 1,
                 title,
                 description,
                 price : +price,
-                image : req.file ? req.files.filename : 'default-image.png',
+                images : req.files.length != 0 ? imagenes : ['default-image.png'],
                 category
             }
            productos.push(producto);
@@ -43,7 +46,8 @@ module.exports = {
 
         return res.render('productDetail',{
             producto,
-            productos
+            productos,
+            relacionados : productos.filter(item => item.category === producto.category)
         })
     },
     search : (req,res) => {

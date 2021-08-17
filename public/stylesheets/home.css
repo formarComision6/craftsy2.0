@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
+.home .banner .carousel-item{
+    height: 355px;
+    width: 100%;
+    background-size: 100%;
+}
+
 .home section.productos article{
     background-color: #ffff;
     box-shadow: 2px 2px 5px grey;

@@ -4,7 +4,9 @@
     "title": "Iphone SE",
     "description": "lorem ipsum dolor amet sit            ",
     "price": 100,
-    "image": "img-phone-01.jpg",
+    "images": [
+      "img-phone-01.jpg"
+    ],
     "category": "nuevo"
   },
   {
@@ -12,7 +14,9 @@
     "title": "Samsung A02",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-02.jpg",
+    "images": [
+      "img-phone-02.jpg"
+    ],
     "category": "usado"
   },
   {
@@ -20,7 +24,9 @@
     "title": "Hyundai K4",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-03.png",
+    "images": [
+      "img-phone-03.png"
+    ],
     "category": "refaccionado"
   },
   {
@@ -28,7 +34,9 @@
     "title": "Motorola G9",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-04.png",
+    "images": [
+      "img-phone-04.png"
+    ],
     "category": "refaccionado"
   },
   {
@@ -36,7 +44,9 @@
     "title": "LG Luminus",
     "description": "lorem ipsum dolor amet sit                             ",
     "price": 300,
-    "image": "img-phone-05.jpg",
+    "images": [
+      "img-phone-05.jpg"
+    ],
     "category": "nuevo"
   },
   {
@@ -44,7 +54,9 @@
     "title": "Nokia 1100",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-06.png",
+    "images": [
+      "img-phone-06.png"
+    ],
     "category": "usado"
   },
   {
@@ -52,15 +64,19 @@
     "title": "Iphone SE",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-01.jpg",
-    "category": "nuevo"
+    "images": [
+      "img-phone-01.jpg"
+    ],
+    "category": "usado"
   },
   {
     "id": 8,
     "title": "Samsung A02",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-02.jpg",
+    "images": [
+      "img-phone-02.jpg"
+    ],
     "category": "usado"
   },
   {
@@ -68,15 +84,19 @@
     "title": "Hyundai K4",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-03.png",
-    "category": "refaccionado"
+    "images": [
+      "img-phone-03.png"
+    ],
+    "category": "usado"
   },
   {
     "id": 10,
     "title": "Motorola G9",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-04.png",
+    "images": [
+      "img-phone-04.png"
+    ],
     "category": "refaccionado"
   },
   {
@@ -84,7 +104,9 @@
     "title": "LG Luminus",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-05.jpg",
+    "images": [
+      "img-phone-05.jpg"
+    ],
     "category": "nuevo"
   },
   {
@@ -92,55 +114,21 @@
     "title": "Nokia 1100",
     "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "img-phone-06.png",
+    "images": [
+      "img-phone-06.png"
+    ],
     "category": "usado"
   },
   {
     "id": 13,
-    "title": "Iphone X",
-    "description": "carísimo pero copadoo  ",
-    "price": 1000,
-    "image": "default-image.png",
-    "category": "nuevo"
-  },
-  {
-    "id": 14,
-    "title": "Iphone X2",
-    "description": "más caro todavía",
-    "price": 2000,
-    "image": "default-image.png",
-    "category": "nuevo"
-  },
-  {
-    "id": 15,
     "title": "Product example",
-    "description": "Lorem ipsum dolor amet sit",
+    "description": "lorem ipsum dolor amet sit",
     "price": 100,
-    "image": "default-image.png",
-    "category": "usado"
-  },
-  {
-    "id": 16,
-    "title": "LG Luminus",
-    "description": "Está bueno y barato",
-    "price": 123,
-    "image": "default-image.png",
-    "category": "refaccionado"
-  },
-  {
-    "id": 17,
-    "title": "Iphone X2",
-    "description": "Carísimooooo",
-    "price": 12645,
-    "image": "default-image.png",
-    "category": "nuevo"
-  },
-  {
-    "id": 18,
-    "title": "Motorola X-Play",
-    "description": "Esta está mejor que cualquiera!!",
-    "price": 123,
-    "image": "default-image.png",
+    "images": [
+      "images-1629222495975.jpg",
+      "images-1629222495977.png",
+      "images-1629222496011.png"
+    ],
     "category": "usado"
   }
 ]
